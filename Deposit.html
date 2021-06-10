@@ -1,0 +1,215 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	var percent;
+	var countYearDeposite;
+	var startDeposite;
+	var yearInflation;
+	var finalDeposite;
+	var deltaDeposite;
+	var addMoney;
+	var programmInvest;
+	while(true){
+	var currency = +prompt("Выберите валюту: \n1. Рубли \n2. Доллары \n3. Евро");
+	if (currency == 1){
+		yearInflation = 0.06;
+		programmInvest = +prompt("Выберите программу инвестирования: \n1. Программа на 5 лет под 10% годовых. \n2. Программа на 10 лет под 13% годовых. \n3. Программа на 15 лет под 16% годовых. \n4. Я подберу для себя сам срок и доходность.");
+				if (programmInvest == 1){
+					startDeposite = +prompt("Введите сумму в рублях: ");
+					percent = 0.1;
+					countYearDeposite = 5;
+						for (var i = 1; i <= countYearDeposite; i++){
+							var originDeposite = startDeposite;
+							startDeposite += (startDeposite * percent) - (startDeposite * yearInflation);
+							deltaDeposite = startDeposite - originDeposite;
+							document.write("Количество лет: " + i + ". Средств на счете: " + startDeposite.toFixed(2) + ". Прирост составил: " + deltaDeposite.toFixed(2) + ".<br>" );
+								
+						}
+				break;
+
+
+				}
+				else if (programmInvest == 2){
+					startDeposite = +prompt("Введите сумму в рублях: ");
+					percent = 0.13;
+					countYearDeposite = 10;
+						for (var i = 1; i <= countYearDeposite; i++){
+							var originDeposite = startDeposite;
+							startDeposite += (startDeposite * percent) - (startDeposite * yearInflation);
+							deltaDeposite = startDeposite - originDeposite;
+							document.write("Количество лет: " + i + ". Средств на счете: " + startDeposite.toFixed(2) + ". Прирост составил: " + deltaDeposite.toFixed(2) + ".<br>" );
+								
+						}
+				break;
+
+
+				}
+				else if (programmInvest == 3){
+					startDeposite = +prompt("Введите сумму в рублях: ");
+					percent = 0.16;
+					countYearDeposite = 15;
+						for (var i = 1; i <= countYearDeposite; i++){
+							var originDeposite = startDeposite;
+							startDeposite += (startDeposite * percent) - (startDeposite * yearInflation);
+							deltaDeposite = startDeposite - originDeposite;
+							document.write("Количество лет: " + i + ". Средств на счете: " + startDeposite.toFixed(2) + ". Прирост составил: " + deltaDeposite.toFixed(2) + ".<br>" );
+								
+						}
+				break;
+
+
+				}
+				else {
+					startDeposite = +prompt("Введите сумму в рублях: ");
+					percent = +prompt("Введите количество процентов: ");
+					yearInflation = +prompt("Введите процент инфляции: ");
+					countYearDeposite= +prompt("Введите количество лет: ");
+					addMoney = +prompt("Введите сумму довложений: ")
+					for (var i = 1; i <= countYearDeposite; i++){
+							var originDeposite = startDeposite;
+							startDeposite += (startDeposite * percent) - (startDeposite * yearInflation) + addMoney;
+							deltaDeposite = startDeposite - originDeposite;
+							document.write("Количество лет: " + i + ". Средств на счете: " + startDeposite.toFixed(2) + ". Прирост составил: " + deltaDeposite.toFixed(2) + ". Сумма довложений: " + addMoney + ".<br>" );
+
+				}
+				break;
+
+	}
+}
+	if (currency == 2){
+		yearInflation = 0.02;
+		programmInvest = +prompt("Выберите программу инвестирования: \n1. Программа на 5 лет под 5% годовых. \n2. Программа на 10 лет под 8% годовых. \n3. Программа на 15 лет под 12% годовых. \n4. Я подберу для себя сам срок и доходность.");
+				if (programmInvest == 1){
+					startDeposite = +prompt("Введите сумму в долларах: ");
+					percent = 0.05;
+					countYearDeposite = 5;
+						for (var i = 1; i <= countYearDeposite; i++){
+							var originDeposite = startDeposite;
+							startDeposite += (startDeposite * percent) - (startDeposite * yearInflation);
+							deltaDeposite = startDeposite - originDeposite;
+							document.write("Количество лет: " + i + ". Средств на счете: " + startDeposite.toFixed(2) + ". Прирост составил: " + deltaDeposite.toFixed(2) + ".<br>" );
+								
+						}
+				break;
+
+
+				}
+				else if (programmInvest == 2){
+					startDeposite = +prompt("Введите сумму в долларах: ");
+					percent = 0.08;
+					countYearDeposite = 10;
+						for (var i = 1; i <= countYearDeposite; i++){
+							var originDeposite = startDeposite;
+							startDeposite += (startDeposite * percent) - (startDeposite * yearInflation);
+							deltaDeposite = startDeposite - originDeposite;
+							document.write("Количество лет: " + i + ". Средств на счете: " + startDeposite.toFixed(2) + ". Прирост составил: " + deltaDeposite.toFixed(2) + ".<br>" );
+								
+						}
+				break;
+
+
+				}
+				else if (programmInvest == 3){
+					startDeposite = +prompt("Введите сумму в долларах: ");
+					percent = 0.12;
+					countYearDeposite = 15;
+						for (var i = 1; i <= countYearDeposite; i++){
+							var originDeposite = startDeposite;
+							startDeposite += (startDeposite * percent) - (startDeposite * yearInflation);
+							deltaDeposite = startDeposite - originDeposite;
+							document.write("Количество лет: " + i + ". Средств на счете: " + startDeposite.toFixed(2) + ". Прирост составил: " + deltaDeposite.toFixed(2) + ".<br>" );
+								
+						}
+				break;
+
+
+				}
+				else {
+					startDeposite = +prompt("Введите сумму в долларах: ");
+					percent = +prompt("Введите количество процентов: ");
+					yearInflation = +prompt("Введите процент инфляции: ");
+					countYearDeposite= +prompt("Введите количество лет: ");
+					addMoney = +prompt("Введите сумму довложений: ")
+					for (var i = 1; i <= countYearDeposite; i++){
+							var originDeposite = startDeposite;
+							startDeposite += (startDeposite * percent) - (startDeposite * yearInflation) + addMoney;
+							deltaDeposite = startDeposite - originDeposite;
+							document.write("Количество лет: " + i + ". Средств на счете: " + startDeposite.toFixed(2) + ". Прирост составил: " + deltaDeposite.toFixed(2) + ". Сумма довложений: " + addMoney + ".<br>" );
+
+				}
+				break;
+
+	}
+}
+	if (currency == 3){
+		yearInflation = 0.02;
+		programmInvest = +prompt("Выберите программу инвестирования: \n1. Программа на 5 лет под 5% годовых. \n2. Программа на 10 лет под 8% годовых. \n3. Программа на 15 лет под 12% годовых. \n4. Я подберу для себя сам срок и доходность.");
+				if (programmInvest == 1){
+					startDeposite = +prompt("Введите сумму в евро: ");
+					percent = 0.05;
+					countYearDeposite = 5;
+						for (var i = 1; i <= countYearDeposite; i++){
+							var originDeposite = startDeposite;
+							startDeposite += (startDeposite * percent) - (startDeposite * yearInflation);
+							deltaDeposite = startDeposite - originDeposite;
+							document.write("Количество лет: " + i + ". Средств на счете: " + startDeposite.toFixed(2) + ". Прирост составил: " + deltaDeposite.toFixed(2) + ".<br>" );
+								
+						}
+				break;
+
+
+				}
+				else if (programmInvest == 2){
+					startDeposite = +prompt("Введите сумму в евро: ");
+					percent = 0.08;
+					countYearDeposite = 10;
+						for (var i = 1; i <= countYearDeposite; i++){
+							var originDeposite = startDeposite;
+							startDeposite += (startDeposite * percent) - (startDeposite * yearInflation);
+							deltaDeposite = startDeposite - originDeposite;
+							document.write("Количество лет: " + i + ". Средств на счете: " + startDeposite.toFixed(2) + ". Прирост составил: " + deltaDeposite.toFixed(2) + ".<br>" );
+								
+						}
+				break;
+
+
+				}
+				else if (programmInvest == 3){
+					startDeposite = +prompt("Введите сумму в евро: ");
+					percent = 0.12;
+					countYearDeposite = 15;
+						for (var i = 1; i <= countYearDeposite; i++){
+							var originDeposite = startDeposite;
+							startDeposite += (startDeposite * percent) - (startDeposite * yearInflation);
+							deltaDeposite = startDeposite - originDeposite;
+							document.write("Количество лет: " + i + ". Средств на счете: " + startDeposite.toFixed(2) + ". Прирост составил: " + deltaDeposite.toFixed(2) + ".<br>" );
+								
+						}
+				break;
+
+
+				}
+				else {
+					startDeposite = +prompt("Введите сумму в евро: ");
+					percent = +prompt("Введите количество процентов: ");
+					yearInflation = +prompt("Введите процент инфляции: ");
+					countYearDeposite= +prompt("Введите количество лет: ");
+					addMoney = +prompt("Введите сумму довложений: ")
+					for (var i = 1; i <= countYearDeposite; i++){
+							var originDeposite = startDeposite;
+							startDeposite += (startDeposite * percent) - (startDeposite * yearInflation) + addMoney;
+							deltaDeposite = startDeposite - originDeposite;
+							document.write("Количество лет: " + i + ". Средств на счете: " + startDeposite.toFixed(2) + ". Прирост составил: " + deltaDeposite.toFixed(2) + ". Сумма довложений: " + addMoney + ".<br>" );
+
+				}
+				break;
+
+	}
+}
+}
+
+	
+	
+
+
+</script>

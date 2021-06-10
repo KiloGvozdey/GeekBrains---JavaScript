@@ -1,0 +1,60 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	
+	var firstGuess = ("Сидит дед в сто шуб одет, кто его раздевает, тот слезы проливает. О чем идет речь?");
+	var secondGuess = ("Зимой и летом одним цветом. О чем идет речь?");
+	var thirdGuess = ("Ни лает, ни кусает, а в дом не пускает. О чем идет речь?");
+	var score = 0;
+
+	alert("Вас приветствует игра УГАДАЙ-КА!");
+	
+	while (true){
+		alert("Угадайте загадку: " + firstGuess);
+		var user_firstAnswer = prompt("Мой ответ - это ");
+		if ((user_firstAnswer === "Лук") || (user_firstAnswer === "лук") || (user_firstAnswer === "лучок") || (user_firstAnswer === "Лучок")){
+			score++;
+			alert("Красава! Твой счет составляет: " + score + "\nПерейдем к следующей загадке?");
+			break;
+		}
+		else {
+			alert("Твой ответ неправильный мой хороший! Твой счет составляет: " + score + "\nПерейдем к следующей загадке?");
+			break;
+		}
+	}
+	while (true){
+		alert("Угадайте загадку: " + secondGuess);
+		var user_secondAnswer = prompt("Мой ответ - это ");
+		if ((user_secondAnswer === "Ёлка") || (user_secondAnswer === "Ель") || (user_secondAnswer ==="ель") || (user_secondAnswer === "ёлка") || (user_secondAnswer === "елочка") || (user_secondAnswer === "ёлочка") || (user_secondAnswer === "елка") || (user_secondAnswer ==="Елочка") || (user_secondAnswer === "Ёлочка")){
+			score++;
+			alert("Красава! Твой счет составляет: " + score + "\nПерейдем к следующей загадке?");
+			break;
+		}
+		else {
+			alert("Твой ответ неправильный мой хороший! Твой счет составляет: " + score + "\nПерейдем к следующей загадке?");
+			break;
+		}
+	}
+	while (true){
+		alert("Угадайте загадку: " + thirdGuess);
+		var user_thirdAnswer = prompt("Мой ответ - это ");
+		if ((user_thirdAnswer === "Замок") || (user_thirdAnswer === "замок")){
+			score++;
+			alert("Красава! \nИгра окончена! \nТвой счет составляет: " + score);
+			break;
+		}
+		else {
+			alert("Твой ответ неправильный мой хороший! \nИгра окончена! \nТвой счет составляет: " + score);
+			break;
+		}
+	}
+
+
+
+
+	
+
+
+
+
+</script>

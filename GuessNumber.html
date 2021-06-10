@@ -1,0 +1,65 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	var answer;
+	var countPossibleMaxNumber = +prompt("Введите максимальное число: ");
+	var countPossibleMinNumber = +prompt("Введите минимальное число: ");
+		while(true){
+		answer = parseInt(Math.random() * countPossibleMaxNumber);
+
+		if(answer >= countPossibleMinNumber) break;
+	}
+	
+	var user1_tryCount = 0;
+	var user2_tryCount = 0;
+
+	alert("Перед вами игра <<Угадай число>>. Если хотите завершить игру, введите: Устал")
+	while(true){
+
+		var user1_answer = prompt("Игрок 1 \nВведите ваше число от " + countPossibleMinNumber +" до "  + countPossibleMaxNumber + "\n Количесвто попыток: "  + user1_tryCount);
+
+			if (user1_answer === "Устал"){
+				alert("Игра завершена Вы сдались!");
+				break;
+			}
+
+			else if (user1_answer == answer){
+				user1_tryCount++;
+				alert ("Вы угадали, правильный ответ " + answer + "\n Количесвто попыток: " + user1_tryCount);
+				break;
+			}
+			else if (user1_answer > answer){
+				alert ("Слишком большое число. ");
+			}
+			else {
+				alert ("Слишком маленькое число. ");
+			}
+		user1_tryCount++;
+
+		var user2_answer = prompt("Игрок 2 \nВведите ваше число от " + countPossibleMinNumber +" до "  + countPossibleMaxNumber + "\n Количесвто попыток: "  + user2_tryCount);
+
+			if (user2_answer === "Устал"){
+				alert("Игра завершена Вы сдались!");
+				break;
+			}
+
+			else if (user2_answer == answer){
+				user2_tryCount++;
+				alert ("Вы угадали, правильный ответ " + answer + "\n Количесвто попыток: " + user2_tryCount);
+				break;
+			}
+			else if (user2_answer > answer){
+				alert ("Слишком большое число. ");
+			}
+			else {
+				alert ("Слишком маленькое число. ");
+			}
+		user2_tryCount++;
+
+		
+
+
+
+}
+	alert("Правильный ответ был: " + answer);
+
+</script>

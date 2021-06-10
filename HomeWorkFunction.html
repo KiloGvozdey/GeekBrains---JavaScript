@@ -1,0 +1,76 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	function getArrayByNumber(argument) {
+		var array = [];
+		for (var i = 1; i <= argument; i++) {
+			array.push(i);
+			}
+		return array;
+	}
+
+	function getSummArray(array){
+		var summ = 0;
+		for (var i = 0; i < array.length; i++){
+			summ = summ + array[i];
+		}
+		return summ;
+	}
+
+	function getMax(array){
+		var max = array[0];
+		for (var i = 0; i < array.length; i++){
+			if (max < array[i]) {
+				max = array [i];
+			}
+		}
+		return max;
+
+	}
+	function getRandomNumber(maxNumber){
+		return Math.round(Math.random() * maxNumber);
+	}
+
+	function getRandomArray(maxNumber, length){
+		var array = [];
+		for (var i = 0; i < length; i++){
+		 array[i] = getRandomNumber(maxNumber);
+		}
+		return array;
+	}
+
+	function getMin(argument){
+		var n = argument[0];
+		for(var i = 0; i < argument.length; i++){
+			if (argument[i] < n){
+				n = argument[i];
+			}
+		}
+		return n;
+	}
+
+	function getEven(array){
+		var evenArray = [];
+		for(var i = 0; i < array.length; i++){
+			if(array[i] % 2 == 0){
+				evenArray.push(array[i]);
+			}
+		}
+		return evenArray;
+	}
+
+	var randomArray = getRandomArray(200, 10);
+
+	var array = getArrayByNumber(6);
+
+	var array1 = [46, 45, 49, 99, 123, 1, 44];
+
+	var summArray = getSummArray(randomArray);
+
+	var maxNumber = getMax(randomArray);
+
+	var minNumber = getMin(randomArray);
+
+	var evenNumbers = getEven(randomArray);
+
+
+</script>
